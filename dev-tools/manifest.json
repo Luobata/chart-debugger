@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "name": "data-debugger-devtools",
+    "description": "",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": {
+            "19": "images/back.jpg",
+            "38": "images/back.jpg"
+        },
+        "default_title": "data debugger devtools",
+        "default_popup": "pop.html"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "notifications",
+        "storage",
+        "http://*/*",
+        "https://*/*",
+        "file:///*"
+    ],
+    "devtools_page": "background.html",
+    "options_page": "options.html",
+    "web_accessible_resources": [
+        "devtools.html",
+        "background.html",
+        "build/backend.js"
+    ],
+    "background": {
+        "scripts": ["build/background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["build/hook.js"],
+            "run_at": "document_start"
+        }
+    ]
+}
