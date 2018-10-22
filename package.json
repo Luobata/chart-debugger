@@ -1,5 +1,5 @@
 {
-    "name": "data-debugger-tool",
+    "name": "chart-debugger",
     "version": "0.0.1",
     "description": "a data debugger tool",
     "main": "dist/bundle.js",
@@ -63,12 +63,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Luobata/data-debugger-tool.git"
+        "url": "git+https://github.com/Luobata/chart-debugger.git"
     },
     "author": "luobata",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Luobata/data-debugger-tool/issues"
+        "url": "https://github.com/Luobata/chart-debugger/issues"
     },
-    "homepage": "https://github.com/Luobata/data-debugger-tool#readme"
+    "homepage": "https://github.com/Luobata/chart-debugger#readme"
 }
