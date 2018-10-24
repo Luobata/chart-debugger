@@ -44,7 +44,7 @@ window.onload = () => {
                     },
                 });
                 bridge.on('flush', data => {
-                    console.log(data);
+                    // console.log(data);
                     store.commit('changeData', data);
                 });
                 window.getData = () => {

@@ -9737,7 +9737,7 @@ window.onload = function () {
                     }
                 });
                 bridge.on('flush', function (data) {
-                    console.log(data);
+                    // console.log(data);
                     __WEBPACK_IMPORTED_MODULE_2__components_store__["a" /* default */].commit('changeData', data);
                 });
                 window.getData = function () {

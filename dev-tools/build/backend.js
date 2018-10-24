@@ -163,7 +163,7 @@ var getData = function getData(e) {
             listen: function listen(fn) {
                 var listener = function listener(e) {
                     if (e.data.source === 'data-debugger') {
-                        console.log(e.data);
+                        // console.log(e.data);
                         fn(e.data.data);
                     }
                 };
@@ -171,7 +171,7 @@ var getData = function getData(e) {
                 window.addEventListener('message', listener);
             },
             send: function send(data) {
-                console.log(data);
+                // console.log(data);
                 window.postMessage({
                     source: 'data-debugger-backend',
                     data: data
@@ -189,7 +189,7 @@ var getData = function getData(e) {
         });
         bridge.on('flush', function (data) {
             var item = JSON.parse(JSON.stringify(window.__Canvas_Screen_Data || []));
-            console.log(item);
+            // console.log(item);
             bridge.send('flush', item);
         });
     }

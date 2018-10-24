@@ -10,7 +10,7 @@ const getData = e => {
             listen(fn) {
                 const listener = e => {
                     if (e.data.source === 'data-debugger') {
-                        console.log(e.data);
+                        // console.log(e.data);
                         fn(e.data.data);
                     }
                 };
@@ -18,7 +18,7 @@ const getData = e => {
                 window.addEventListener('message', listener);
             },
             send(data) {
-                console.log(data);
+                // console.log(data);
                 window.postMessage(
                     {
                         source: 'data-debugger-backend',
@@ -41,7 +41,7 @@ const getData = e => {
             const item = JSON.parse(
                 JSON.stringify(window.__Canvas_Screen_Data || []),
             );
-            console.log(item);
+            // console.log(item);
             bridge.send('flush', item);
         });
     }

@@ -73,12 +73,12 @@ var port = chrome.runtime.connect({
 });
 var bridgeTotools = function bridgeTotools(e) {
     if (e.data.source === 'data-debugger-backend') {
-        console.log(e.data.data);
+        // console.log(e.data.data);
         port.postMessage(e.data.data);
     }
 };
 var bridgeTobackend = function bridgeTobackend(data) {
-    console.log(data);
+    // console.log(data);
     window.postMessage({
         source: 'data-debugger',
         data: data
